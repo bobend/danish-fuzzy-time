@@ -5,8 +5,8 @@
 
 #define MY_UUID { 0xD4, 0xED, 0x05, 0xFF, 0x75, 0x8B, 0x46, 0x6F, 0x80, 0xBF, 0x55, 0xFA, 0xD9, 0xCB, 0xAA, 0x3C }
 PBL_APP_INFO(MY_UUID,
-             "My Fuzzy Time",
-             "Pebble Technology",
+             "Dansk Fuzzy Tid",
+             "bobend",
              1, 0, /* App version */
              DEFAULT_MENU_ICON,
              APP_INFO_WATCH_FACE);

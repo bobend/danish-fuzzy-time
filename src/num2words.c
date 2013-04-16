@@ -2,51 +2,51 @@
 #include "string.h"
 
 static const char* const ONES[] = {
-  "zero",
-  "one",
-  "two",
-  "three",
-  "four",
-  "five",
-  "six",
-  "seven",
-  "eight",
-  "nine"
+  "nul",
+  "et",
+  "to",
+  "tre",
+  "fire",
+  "fem",
+  "seks",
+  "syv",
+  "otte",
+  "ni"
 };
 
 static const char* const TEENS[] ={
   "",
-  "eleven",
-  "twelve",
-  "thirteen",
-  "fourteen",
-  "fifteen",
-  "sixteen",
-  "seventeen",
-  "eighteen",
-  "nineteen"
+  "elleve",
+  "tolv",
+  "tretten",
+  "fjorten",
+  "femten",
+  "seksten",
+  "sytten",
+  "atten",
+  "nitten"
 };
 
 static const char* const TENS[] = {
   "",
-  "ten",
-  "twenty",
-  "thirty",
-  "forty",
-  "fifty",
-  "sixty",
-  "seventy",
-  "eighty",
-  "ninety"
+  "ti",
+  "tyve",
+  "tredive",
+  "fyrre",
+  "halvtreds",
+  "tres",
+  "halvfjerds",
+  "firs",
+  "halvfems"
 };
 
-static const char* STR_OH_CLOCK = "o'clock";
-static const char* STR_NOON = "noon";
-static const char* STR_MIDNIGHT = "midnight";
-static const char* STR_QUARTER = "quarter";
-static const char* STR_TO = "to";
-static const char* STR_PAST = "past";
-static const char* STR_HALF = "half";
+static const char* STR_OH_CLOCK = "klokken";
+static const char* STR_NOON = "middag";
+static const char* STR_MIDNIGHT = "midnat";
+static const char* STR_QUARTER = "kvart";
+static const char* STR_TO = "i";
+static const char* STR_PAST = "over";
+static const char* STR_HALF = "halv";
 static const char* STR_AFTER = "after";
 
 static size_t append_number(char* words, int num) {
@@ -140,7 +140,7 @@ void fuzzy_time_to_words(int hours, int minutes, char* words, size_t length) {
   }
 
   if (fuzzy_minutes == 5 && !(fuzzy_hours == 0 || fuzzy_hours == 12)) {
-    remaining -= append_string(words, remaining, " ");
     remaining -= append_string(words, remaining, STR_OH_CLOCK);
+	remaining -= append_string(words, remaining, " ");    
   }
 }
